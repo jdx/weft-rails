@@ -19,4 +19,4 @@ updateMap = ->
   window.map ||= new google.maps.Map(document.getElementById("map_canvas"), mapOptions)
   window.marker ||= new google.maps.Marker
     map: map
-  window.marker.position = loc
+  window.marker.setPosition(loc)
