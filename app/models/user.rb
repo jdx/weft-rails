@@ -8,11 +8,15 @@ class User
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  ## Database authenticatable
-  field :email,              :type => String, :default => ""
-  attr_accessible :email
+  field :email
+  field :encrypted_password
+  field :sign_in_count,      :type => Integer, :default => 0
+  field :current_sign_in_at, :type => Time
+  field :last_sign_in_at,    :type => Time
+  field :current_sign_in_ip, :type => String
+  field :last_sign_in_ip,    :type => String
 
-  validates_presence_of :email
+  validates :email, presence: true, format: /@/
 
   index({ email: 1 }, { unique: true, background: true })
 
@@ -55,8 +59,8 @@ class User
   after_create :subscribe_to_mailchimp
 
   def subscribe_to_mailchimp
-    mailchimp = Mailchimp::API.new("1727a15c3933bf153f6315cb2f16a707-us6")
-    mailchimp.listSubscribe :id => '21989', :email_type => "html", :email_address => self.email, :double_optin => false 
+    @@mailchimp ||= Mailchimp::API.new(ENV['MAILCHIMP_KEY'])
+    mailchimp.listSubscribe :id => '21989', :email_type => "html", :email_address => self.email, :double_optin => false
     #, :merge_vars => {:FNAME => self.name}
   end
 
