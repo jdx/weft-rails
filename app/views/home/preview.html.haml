@@ -1,1 +1,10 @@
 %h1 Preview
+#map_canvas{ style: 'width:100%; height:400px;"' }
+%pre
+  lat:
+  #lat #{@location.lat}
+  lon:
+  #lon #{@location.lon}
+  elevation: #{@location.elevation}
+  %br/
+  updated_at: #{@location.created_at}

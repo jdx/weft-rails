@@ -3,5 +3,6 @@ class HomeController < ApplicationController
   end
 
   def preview
+    @location = DeviceLocation.last
   end
 end
