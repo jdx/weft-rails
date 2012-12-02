@@ -36,11 +36,28 @@ body {
   font-size: 1.3em;
 }
 
+
 .index_holder {
+  position: relative;
   width: 600px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.index_holder_logo {
+  position: absolute;
+  left: -235px;
+  top: -21px;
+  background: url(/assets/header_logo.png);
+  background-repeat: no-repeat;
+  height: 282px;
+  width: 220px;
+}
+
+a {
+  text-decoration: none;
+  color:white;
 }
 
 .button {

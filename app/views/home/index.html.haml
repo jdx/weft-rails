@@ -1,12 +1,13 @@
 .index_holder
+  .index_holder_logo
   .index_holder_header
     %h1 
       It's like LoJack for your bike, but better.
   .index_holder_content
     %p
       Weft fits discretely into the frame of your bicycle and phones home with its current location
-    .button
-      = link_to "see a demo", preview_path
     = form_for @user do |f|
       = f.text_field :email, :placeholder => "Email address", :size => 30
-      = f.submit "Get one, soon"
+      = f.submit "Get one, soon", :class => "button"
+    .button
+      = link_to "see a demo", preview_path
