@@ -1,7 +1,7 @@
 Weft::Application.routes.draw do
-  get "home/index"
+  devise_for :users, :controllers => { :registrations => "registrations" }
 
-  get "home/preview"
+  resources :users
 
   resource :device
   match 'preview' => 'home#preview'

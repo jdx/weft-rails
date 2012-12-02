@@ -27,4 +27,6 @@ Weft::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  ENV['SECRET_TOKEN'] = "some secret phrase of at least 30 characters"
 end
