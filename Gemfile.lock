@@ -71,6 +71,7 @@ GEM
       tzinfo (~> 0.3.22)
     moped (1.2.9)
     multi_json (1.4.0)
+    oj (1.4.5)
     origin (1.0.10)
     polyglot (0.3.3)
     pusher (0.11.1)
@@ -145,6 +146,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   mongoid
+  oj
   pusher
   quiet_assets
   rabl-rails

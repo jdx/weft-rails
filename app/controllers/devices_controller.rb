@@ -4,11 +4,12 @@ class DevicesController < ApplicationController
 
   def show
     @location = DeviceLocation.last
+    render :show, content_type: 'application/json'
   end
 
   def create
     @location = DeviceLocation.create!(lat: params[:lat], lon: params[:lon], elevation: params[:elevation])
-    render :show
+    render :show, content_type: 'application/json'
   end
 
 end

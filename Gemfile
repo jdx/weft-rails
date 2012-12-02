@@ -10,6 +10,7 @@ gem 'mongoid'
 gem 'rabl-rails'
 gem 'thin'
 gem 'pusher'
+gem 'oj'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
