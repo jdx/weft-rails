@@ -60,8 +60,7 @@ class User
 
   def subscribe_to_mailchimp
     @@mailchimp ||= Mailchimp::API.new(ENV['MAILCHIMP_KEY'])
-    mailchimp.listSubscribe :id => '21989', :email_type => "html", :email_address => self.email, :double_optin => false
-    #, :merge_vars => {:FNAME => self.name}
+    @@mailchimp.listSubscribe :id => 'b55260151a', :email_type => "html", :email_address => self.email, :double_optin => false
   end
 
 end
