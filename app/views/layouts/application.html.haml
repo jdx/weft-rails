@@ -11,7 +11,11 @@
   %body
     .navbar
       .navbar-inner
-        = link_to "weft", root_path, class: 'brand'
     .container
       = yield
-      #footer weft.io
+      #footer
+        .left
+          = link_to "About", root_path
+          = link_to "Legal", root_path
+          = link_to "Contact", root_path
+        .right &copy; 2012 Weft, Inc.

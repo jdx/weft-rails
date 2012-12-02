@@ -10,7 +10,7 @@ class User
 
   ## Database authenticatable
   field :email,              :type => String, :default => ""
-  attr_accessible
+  attr_accessible :email
 
   validates_presence_of :email
 
@@ -44,6 +44,7 @@ class User
 
   ## Token authenticatable
   # field :authentication_token, :type => String
+
   # run 'rake db:mongoid:create_indexes' to create indexes
   index({ email: 1 }, { unique: true, background: true })
   field :name, :type => String
@@ -58,4 +59,5 @@ class User
     mailchimp.listSubscribe :id => '21989', :email_type => "html", :email_address => self.email, :double_optin => false 
     #, :merge_vars => {:FNAME => self.name}
   end
+
 end
