@@ -1,11 +1,22 @@
 $ ->
+  updateMap()
+  pusher = new Pusher('533917a995f14c4f3a5c')
+  channel = pusher.subscribe('test_channel')
+  channel.bind 'update', ->
+    $.getJSON '/device.json', (data) ->
+      $('#lat').text(data.location.lat)
+      $('#lon').text(data.location.lon)
+      updateMap()
+
+updateMap = ->
   lat = parseFloat($('#lat').text())
   lon = parseFloat($('#lon').text())
+  loc = new google.maps.LatLng(lat, lon)
   mapOptions =
-    center: new google.maps.LatLng(lat, lon),
-    zoom: 8,
+    center: loc,
+    zoom: 15,
     mapTypeId: google.maps.MapTypeId.ROADMAP
-  console.log mapOptions
-  console.log lat
-  console.log $('#lat').text()
   map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions)
+  marker = new google.maps.Marker
+    position: loc,
+    map: map

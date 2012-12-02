@@ -4,8 +4,9 @@
     %title weft
     %meta{ name: "viewport", content: "initial-scale=1.0, user-scalable=no" }
     = stylesheet_link_tag    "application", media: "all"
-    = javascript_include_tag "application"
     = javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyB9al3574sMeVWlwOhiC9zuyH8pS3u8XgI&sensor=true"
+    = javascript_include_tag "http://js.pusher.com/1.12/pusher.min.js"
+    = javascript_include_tag "application"
     = csrf_meta_tags
   %body
     .navbar

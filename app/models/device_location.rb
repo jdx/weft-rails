@@ -8,4 +8,10 @@ class DeviceLocation
 
   validates :lat, presence: true
   validates :lon, presence: true
+
+  after_create :update_pusher
+
+  def update_pusher
+    Pusher.trigger('test_channel', 'update', {})
+  end
 end
