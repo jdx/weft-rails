@@ -6,6 +6,8 @@
 // Document styles
 //-----------------------------------------
 
+@include font-face("Section-LightItalic", font-files("assets/Section-LightItalic.otf"));
+
 html {
   background: image-url("index_background.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -18,8 +20,29 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: "Section-LightItalic";
 }
 
 #map_canvas {
   height: 100%;
+}
+
+.light_italic{
+  font-family: "Section-LightItalic";
+}
+
+.index_holder_content {
+  color: #c74949;
+  font-size: 1.3em;
+}
+
+.index_holder {
+  width: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  @include sassy-button;
 }

@@ -19,6 +19,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'compass-rails'
   gem 'compass-h5bp'
+  gem 'sassy-buttons'
   gem 'uglifier', '>= 1.0.3'
 end
 
