@@ -6,10 +6,13 @@
   %body{ :class => "#{ controller.controller_name }" }
     = render "chromeframe"
     =# render "header"
-
-    #main{ :role => "main" }
+    #header
+      = link_to "Weft.io", root_path, :id => "logo"
       = render "flashes"
       = yield
+
+    =# #main{ :role => "main" }
+      
 
     = render "footer"
 
