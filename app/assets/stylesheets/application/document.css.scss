@@ -130,6 +130,10 @@ form#new_user {
   }
 }
 
+#preview {
+  background: image-url('preview_background.jpg') repeat-x center center fixed;
+}
+
 .notice {
   background-color: red;
   font-size: 1.2em;
