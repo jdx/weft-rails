@@ -4,16 +4,11 @@
   %h2
     Always know your bike's location in seconds, even when it moves without you
 
-  .under_fold
-    .benefits
-      %ul
-        %li Up-to-the-second data 
-        %li Advanced movement sensor
-        %li Instant notifications
-        %li A safer bike.
-    .thing
-      %p Weft is still in development, so if you’re interested in getting one, get on our pre-order list.
-      = form_for @user do |f|
-        = f.text_field :email, :placeholder => "Email address", :size => 30
-        = f.submit "Get one, soon"
+.under_fold
+  .benefits
+  .cta
+    %p Weft is still in development, so if you’re interested in getting one, get on our pre-order list.
+    = form_for @user do |f|
+      = f.text_field :email, :placeholder => "Email address", :size => 30
+      = f.submit "Get one, soon"
 
