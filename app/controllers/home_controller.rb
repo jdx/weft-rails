@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   end
 
   def preview
-    @location = DeviceLocation.last
+    #@location = DeviceLocation.last
+    @user = current_user || User.new
   end
 end
