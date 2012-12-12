@@ -8,7 +8,8 @@ html {
 body {
   width: 960px;
   margin: 0 auto;
-  font-family: "Section-LightItalic", Helvetica, sans-serif;
+  font-family: "Section", Helvetica, sans-serif;
+  font-weight: lighter;
 }
 
 #header {
@@ -31,7 +32,7 @@ body {
     padding-left: 32px;
 
     h1 {
-      font-family: "Section-MediumItalic";
+      font-family: "Section";
       font-size: 40px;
       font-style: italic;
     }
@@ -40,7 +41,8 @@ body {
       width: 600px;
       margin-top: 24px;
       line-height: 36px;
-      font-family: "Section-LightItalic";
+      font-family: "Section";
+      font-weight: lighter;
       font-size: 26px;
       font-style: italic;
       font-weight: 100;
@@ -95,7 +97,8 @@ form#new_user {
     float: left;
     border: none;
     background: image-url('emailfield.png') no-repeat;
-    font-family: "Section-LightItalic";
+    font-family: "Section";
+    font-weight: lighter;
     font-size: 22px;
     color: #9b9b9b;
 
